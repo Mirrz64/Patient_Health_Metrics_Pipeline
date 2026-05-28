@@ -1,0 +1,25 @@
+# Data Warehouse & Local Spark Storage (Crucial to block)
+# Ignores all local streaming data, silver/gold tables, and checkpoints
+data/
+
+# Ignores temporary local Spark application metadata and log databases
+spark-warehouse/
+metastore_db/
+derby.log
+*.pyc
+__pycache__/
+
+# Power BI Development Workspace Metadata
+# Blocks temporary data engine cache files and visual lock tracking files
+*.pbit
+*.pbi
+*.pbix.lock
+
+# IDE Settings and Operating System Clutter
+# Blocks workspace-specific window layouts and theme changes
+.vscode/
+.idea/
+
+# Blocks localized system file indexing (Windows folders)
+Thumbs.db
+.DS_Store
