@@ -6,9 +6,11 @@ The final layer of the pipeline features an operational control room dashboard b
 
 ### 1. Hospital Ward Telemetry Overview
 Tracks real-time stream acceleration, high/low heart rate event volumes, and baseline ward metrics over a time-series axis.
+![Ward Overview](images/BI_Ward_Overview.png)
 
 ### 2. Clinical Risk Assessment & Registry
 Aggregates distinct patient cohorts into prioritized risk profiles while auditing completely anonymized, SHA-256 masked patient records.
+![Risk Breakdown](images/BI_Risk_Breakdown.png)
 
 ## 🏗️ Architecture & Data Journey
 The pipeline manages high-throughput stream processing by breaking transformations into structured storage tiers:
@@ -51,9 +53,11 @@ A secondary PySpark batch aggregation script processes the Silver layer to compu
 ## 🔬 Pipeline Validation Reports
 ### Broker Telemetry Ingestion (Kafdrop UI)
 Validation scan proving 1,218 records successfully captured and distributed across the message broker with sequential zero-loss offsets:
+![Kafka Drop Validation](images/Pipeline_val_report(KFD).png)
 
 ### Spark Processing & Masking Validation
 Terminal audit proving successful execution of the streaming engine, structural masking of the patient_id_masked column, and isolation of 82 critical clinical anomalies:
+![Terminal Validation Report](images/Pipeline_val_report(VSC).png)
 
 ## 🚀 Deployment & Execution Blueprint
 ### 1. Initialize Cluster Infrastructure
